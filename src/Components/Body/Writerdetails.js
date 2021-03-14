@@ -5,12 +5,15 @@ import WriterdetailsRight from './WriterdetailsRight';
 const Writerdetails = () => {
     return (
         <>
-        <div style={{marginTop:'3rem'}}>
-        <Row justify="space-around">
-      <Col span={14} style={{backgroundColor:'green'}}><WriterdetailsLeft /></Col>
-      <Col span={6} style={{backgroundColor:'blue'}}><WriterdetailsRight /></Col>
-      
-    </Row>
+        <div style={{marginTop:'2rem'}}>
+          <Row justify="space-around">
+          <Col span={14}  >
+          <WriterdetailsLeft userName='Sagar Pokhrel' />
+          </Col>
+          <Col span={8} >
+        <WriterdetailsRight />
+        </Col>
+         </Row>
         </div>    
         </>
     )
