@@ -16,7 +16,7 @@ const FeaturesLeft = () => {
              <div style={{display:'flex',justifyContent:'space-around'}}>
              {features.map((feature)=>{
               return(
-                 <p  style={{color:'#00A34B',fontWeight:'600'}}key={feature.id}><i   style={{marginRight:'4px',color:'black'}} className={feature.icon}></i>{feature.title}</p>      
+                 <p  style={{color:'#00A34B',fontWeight:'600',cursor:'pointer'}}key={feature.id}><i   style={{marginRight:'4px',color:'black'}} className={feature.icon}></i>{feature.title}</p>      
          
               )
           })} 
