@@ -11,11 +11,12 @@ import Navuserimg from './Navuserimg';
         <Menu.Item  style={{marginLeft:'4rem'}} >
          <a href='#'>
           <Image src='../opinion-logo.png' alt='opinionLogo' 
-          style={{width:'80px',height:'72px',padding: '8px 0px 3px 6px'}}/>
+          style={{width:'80px',height:'74px',padding: '15px 0px 3px 6px'}}/>
           </a>
+     
         </Menu.Item>
         <div style={{float:'right'}}>
-          <div style={{marginTop:'1rem',justifyContent:'space-between'}}>
+          <div style={{marginTop:'1.5rem',justifyContent:'space-between'}}>
           <Navbutton value='Post Opinion' />
           <Navicon />
           <Navuserimg />

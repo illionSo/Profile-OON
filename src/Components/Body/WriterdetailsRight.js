@@ -1,5 +1,5 @@
 export const detailsRight= [
-    {id:'1',icon:'fas fa-user-edit',des:'Professional Contant Writer'},
+    {id:'1',icon:'fas fa-user-edit',des:'Professional Content Writer'},
     {id:'2',icon:'fas fa-university',des:'Last Degree:Bachelor in Computer Science'},
     {id:'3',icon:'far fa-star',des:'OON Level:'}
 ]

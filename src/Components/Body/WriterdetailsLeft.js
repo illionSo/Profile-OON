@@ -1,5 +1,5 @@
 
-import { Avatar } from 'antd'
+import { Avatar, Col , Row } from 'antd'
 export const detailsLeft = [
      {userDetails:'Creative Writer  and Entrepreneur',id:1},
      {userDetails:'Kathmandu,Nepal',id:2},
@@ -19,17 +19,18 @@ const WriterdetailsLeft = ({userName}) => {
            />
            </div>
            
-           <div style={{marginLeft:'2rem'}}>
+           <div style={{marginLeft:'1rem'}}>
            <h2 style={{color:'#00A34B',fontWeight:'600'}}>{userName}</h2>
                 {detailsLeft.map((detail)=>{
                     return(
                         <h4 key={detail.id} style={{fontWeight:'600'}}>{detail.userDetails}</h4>
                     )
                 })}
-                </div>
-           
+            
+           </div>
            
            </div>
+           
            
            </div>
         
