@@ -1,5 +1,5 @@
 
-@import '~antd/dist/antd.less';
+@import '~antd/dist/antd.css';
 body{
   padding:0;
   margin: 0;
@@ -8,24 +8,24 @@ body{
 
 }
 .ant-btn-lg{
-  border-color:@primary-color;
-  color:@primary-color;
-  &:hover{
-    background-color:@primary-color ;
+  border-color:#00A34B;
+  color:#00A34B;
+}
+.ant-btn-lg:hover{
+    background-color:#00A34B ;
     color: #fff;
   }
-}
-
 
 .writerdetailsStyle{
   display: inline-flex;
 }
 .styleWriterleft{
-  // margin-left:11rem;
-  padding:2rem;
-  h3{color: @primary-color;}
   
+  padding:2rem;
 }
+.styleWriterleft h3{color: #00A34B;}
+  
+
 
 .imgStyle{
   width: 46px;

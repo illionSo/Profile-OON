@@ -11,7 +11,7 @@ const WriterdetailsRight = () => {
             <hr></hr>
          {detailsRight.map((detail)=> {
              return (
-                 <div style={{display:'flex'}}>
+                 <div style={{display:'flex'}} key={detail.id}>
                 <i className={detail.icon}></i>
                  <h4 style={{marginLeft:'1rem',fontWeight:'600'}}>{detail.des}</h4>
                  </div>
