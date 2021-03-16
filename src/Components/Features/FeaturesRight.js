@@ -1,9 +1,9 @@
-import React from 'react'
+import { Input } from 'antd';
 
 const FeaturesRight = () => {
     return (
         <>
-           <input type='text' /> 
+           <Input placeholder='Search' /> 
         </>
     )
 }

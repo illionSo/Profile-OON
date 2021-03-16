@@ -27,7 +27,7 @@ const FeaturesLeft = () => {
           <hr style={{marginLeft:'1rem'}}></hr>
         </Col>
         
-         <Col xs={10} sm={10} md={5} lg={6} xl={5}>
+         <Col xs={10} sm={10} md={5} lg={6} xl={6}>
          
          <FeaturesRight/>
          </Col>

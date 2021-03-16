@@ -35,6 +35,12 @@ body{
   padding-top: 3px;
   cursor: pointer;
 }
+.ant-input{
+  border: 1px solid #000000;
+box-sizing: border-box;
+border-radius: 15px;
+
+}
 
 
 
