@@ -1,5 +1,7 @@
 import { Col, Row } from 'antd'
 import React from 'react'
+import FeaturesRight from './FeaturesRight'
+
 export const features= [
 {id:'1',title:'Posted Opinions',path:'/',icon:'fa fa-rss'},
 {id:2,title:'Saved',path:'/',icon:'fa fa-edit '},
@@ -11,12 +13,13 @@ export const features= [
 const FeaturesLeft = () => {
     return (
         <>
-         <Row style={{marginTop:'2rem'}}>
+         <Row style={{marginTop:'2.5rem'}} justify="space-around">
              <Col xs={24} md={16} lg={12} xl={11}>
              <div style={{display:'flex',justifyContent:'space-around'}}>
              {features.map((feature)=>{
               return(
-                 <p  style={{color:'#00A34B',fontWeight:'600',cursor:'pointer'}}key={feature.id}><i   style={{marginRight:'4px',color:'black'}} className={feature.icon}></i>{feature.title}</p>      
+                 <p  style={{color:'#00A34B',fontWeight:'600',cursor:'pointer'}}key={feature.id}>
+                     <i  style={{marginRight:'8px',color:'black'}} className={feature.icon}></i>{feature.title}</p>      
          
               )
           })} 
@@ -24,7 +27,10 @@ const FeaturesLeft = () => {
           <hr style={{marginLeft:'1rem'}}></hr>
         </Col>
         
+         <Col xs={10} sm={10} md={5} lg={6} xl={5}>
          
+         <FeaturesRight/>
+         </Col>
          </Row>
          
             
