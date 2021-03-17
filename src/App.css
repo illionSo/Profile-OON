@@ -15,7 +15,9 @@ body{
     background-color:#00A34B ;
     color: #fff;
   }
-
+  .ant-btn-lg span{
+    padding: 2px 17px 4px 4px;
+  }
 .writerdetailsStyle{
   display: inline-flex;
 }

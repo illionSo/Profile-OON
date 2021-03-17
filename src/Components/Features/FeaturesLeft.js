@@ -14,12 +14,13 @@ const FeaturesLeft = () => {
     return (
         <>
          <Row style={{marginTop:'2.5rem'}} justify="space-around">
-             <Col xs={24} md={16} lg={12} xl={11}>
+             <Col xs={22} sm={23} md={16} lg={12} xl={11}>
              <div style={{display:'flex',justifyContent:'space-around'}}>
              {features.map((feature)=>{
               return(
-                 <p  style={{color:'#00A34B',fontWeight:'600',cursor:'pointer'}}key={feature.id}>
-                     <i  style={{marginRight:'8px',color:'black'}} className={feature.icon}></i>{feature.title}</p>      
+                 <a  style={{color:'#00A34B',fontWeight:'600',cursor:'pointer',textDecoration:'none'}}key={feature.id}>
+                     <i  style={{marginRight:'5px',color:'black'}} className={feature.icon}></i>{feature.title}
+                     </a>      
          
               )
           })} 
