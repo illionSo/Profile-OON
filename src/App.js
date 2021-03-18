@@ -3,6 +3,9 @@ import Navbar from './Components/Header/Navbar';
 import Writerdetails from './Components/Body/Writerdetails';
 import FeaturesLeft from './Components/Features/FeaturesLeft';
 import Opinions from './Components/Opinions/Opinions';
+import MockupCard from './Components/Card/MockupCard';
+
+
 
 function App() {
   return (
@@ -11,6 +14,8 @@ function App() {
      <Writerdetails />
      <FeaturesLeft />
      <Opinions />
+
+     <MockupCard />
     </>  
       );
 }

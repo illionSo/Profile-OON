@@ -44,6 +44,30 @@ border-radius: 15px;
 
 }
 
+.site-card-border-less-wrapper {
+  padding: 30px;
+  background: #ececec;
+}
+/* .ant-space-item{
+  margin-right: 3rem !important;
+} */
+.ant-statistic-content-value{
+  font-size: 17px;
+  color:rgb(151, 146, 146);
+}
+.ant-typography{
+  font-weight: 600;
+}
+.ant-btn ant-btn-primary{
+  margin-top:  1rem;
+}
 
+.ant-btn-sm{
+  border: 1px solid #1890ff;
+    padding: 1px 12px 2px;
+    height: 30px;
+}
 
-
+.ant-typography code {
+  background: rgb(183 131 35 / 78%);
+}

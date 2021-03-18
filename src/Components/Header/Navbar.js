@@ -10,7 +10,7 @@ import Navuserimg from './Navuserimg';
       <Menu  mode="horizontal">
         <Menu.Item  style={{marginLeft:'4rem'}} >
          <a href='#'>
-          <Image src='../opinion-logo.png' alt='opinionLogo' 
+          <Image src='../favicon.ico' alt='opinionLogo' 
           style={{width:'80px',height:'74px',padding: '15px 0px 3px 6px'}}/>
           </a>
      
