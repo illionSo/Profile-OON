@@ -8,7 +8,7 @@ import MockupCard from './Components/Card/MockupCard';
 
 
 function App() {
-  return (
+  return (      
     <>
      <Navbar />
      <Writerdetails />

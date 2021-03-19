@@ -1,7 +1,7 @@
 
 
 
-import { Typography,Card,Button,Space,Statistic } from 'antd';
+import { Typography,Card,Button,Space,Statistic,Row,Col } from 'antd';
 const { Title, Paragraph, Text } = Typography;
  export const cardDetails= [
      {
@@ -28,19 +28,32 @@ const MockupCard = () => {
             <Text code >{detail.textTitle}</Text>
             <Title level={4}>{detail.title}</Title>
             <Paragraph>{detail.des}</Paragraph>
-            <Title level={5}>{detail.name}</Title>
-            <Space>
+            <Title level={5} style={{color:	'rgb(148 140 140)'}}>{detail.name}</Title>
             
-            <Statistic value={detail.date} />
-            <div>
-               <Space>
-               <Title level={5} style={{fontWeight:'600',marginLeft:'2.5rem'}}>Approved:</Title>
-               <Button size='small'  > No </Button>
-               </Space>
-            </div>
-            </Space>
-           
-            <Button size='medium' type='primary' style={{marginTop:'1rem'}}>Take This Job </Button>
+            
+             <Row > 
+                 <Col xl={11}>
+                 <Statistic value={detail.date} />
+                 </Col>
+                 <Col xl={13}> 
+                 <Space>                 
+                  <Title level={5} style={{fontWeight:'600',marginLeft:'2.5rem'}}>Approved:</Title>
+                  <Button size='small' > No </Button>
+                  </Space>
+                  </Col>
+             </Row>
+                  
+                  
+                  
+                  
+                 
+                 
+               
+               
+               
+               
+               
+              <Button size='medium' type='primary' style={{marginTop:'1rem'}}>Take This Job </Button>
 
         </>
         )
