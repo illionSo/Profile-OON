@@ -2,8 +2,11 @@
 
 
 import { Typography,Card,Button,Space,Statistic,Row,Col } from 'antd';
+import Cardbutton from './Cardbutton';
 const { Title, Paragraph, Text } = Typography;
- export const cardDetails= [
+ 
+
+export const cardDetails= [
      {
     textTitle:'politics', 
     title:'Covid-19 and Human Nature Interference.',
@@ -32,14 +35,16 @@ const MockupCard = () => {
             
             
              <Row > 
-                 <Col xl={11}>
+                 <Col xl={9}>
                  <Statistic value={detail.date} />
                  </Col>
-                 <Col xl={13}> 
+                 <Col xl={14}> 
+                 <div className='styleSpace'>
                  <Space>                 
-                  <Title level={5} style={{fontWeight:'600',marginLeft:'2.5rem'}}>Approved:</Title>
-                  <Button size='small' > No </Button>
+                  <Title level={5} style={{fontWeight:'600',marginLeft:'1.5rem'}}>Approved:</Title>
+                  <Cardbutton />
                   </Space>
+                  </div>
                   </Col>
              </Row>
                   

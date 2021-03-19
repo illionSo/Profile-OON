@@ -71,7 +71,14 @@ border-radius: 15px;
 .ant-btn-sm span {
   font-weight: 600;
 }
-.ant-space ant-space-horizontal ant-space-align-center{
-  position: absolute;
-  top:'9px';
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector{
+  border: 2px solid  #1890ff !important;
 }
+ .styleSpace  {
+  position: absolute;
+  left: 4px !important;
+    top: 10px !important;
+}
+
+ 
