@@ -1,35 +1,32 @@
-
-@import '~antd/dist/antd.css';
-body{
-  padding:0;
+@import "~antd/dist/antd.css";
+body {
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
-.ant-btn-lg{
-  border-color:#00A34B;
-  color:#00A34B;
+.ant-btn-lg {
+  border-color: #00a34b;
+  color: #00a34b;
 }
-.ant-btn-lg:hover{
-    background-color:#00A34B ;
-    color: #fff;
-  }
-  .ant-btn-lg span{
-    padding: 2px 17px 4px 4px;
-  }
-.writerdetailsStyle{
+.ant-btn-lg:hover {
+  background-color: #00a34b;
+  color: #fff;
+}
+.ant-btn-lg span {
+  padding: 2px 17px 4px 4px;
+}
+.writerdetailsStyle {
   display: inline-flex;
 }
-.styleWriterleft{
-  
-  padding:2rem;
+.styleWriterleft {
+  padding: 2rem;
 }
-.styleWriterleft h3{color: #00A34B;}
-  
+.styleWriterleft h3 {
+  color: #00a34b;
+}
 
-
-.imgStyle{
+.imgStyle {
   width: 46px;
   margin-right: 67px;
   height: 39px;
@@ -37,11 +34,10 @@ body{
   padding-top: 3px;
   cursor: pointer;
 }
-.ant-input{
+.ant-input {
   border: 1px solid #000000;
-box-sizing: border-box;
-border-radius: 15px;
-
+  box-sizing: border-box;
+  border-radius: 15px;
 }
 
 .site-card-border-less-wrapper {
@@ -51,34 +47,32 @@ border-radius: 15px;
 /* .ant-space-item{
   margin-right: 3rem !important;
 } */
-.ant-statistic-content-value{
+.ant-statistic-content-value {
   font-size: 17px;
-  color:rgb(151, 146, 146);
+  color: rgb(151, 146, 146);
 }
-.ant-typography{
+.ant-typography {
   font-weight: 600;
 }
-.ant-btn ant-btn-primary{
-  margin-top:  1rem;
+.ant-btn ant-btn-primary {
+  margin-top: 1rem;
 }
 
-.ant-btn-sm{
+.ant-btn-sm {
   border: 2px solid #1890ff;
-    padding: 3px 22px 4px;
-    height: 35px;
-    color: #1890ff;
+  padding: 3px 22px 4px;
+  height: 35px;
+  color: #1890ff;
 }
 .ant-btn-sm span {
   font-weight: 600;
 }
 
-.ant-select:not(.ant-select-customize-input) .ant-select-selector{
-  border: 2px solid  #1890ff !important;
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border: 2px solid #1890ff !important;
 }
- .styleSpace  {
+.styleSpace {
   position: absolute;
   left: 4px !important;
-    top: 10px !important;
+  top: 10px !important;
 }
-
- 
