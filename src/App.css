@@ -76,3 +76,11 @@ body {
   left: 4px !important;
   top: 10px !important;
 }
+.ant-space ant-space-horizontal ant-space-align-end {
+  top: 136px;
+  right: 25px;
+  position: absolute;
+}
+.ant-popover-message > .anticon {
+  top: "59.005px";
+}

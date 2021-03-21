@@ -1,5 +1,6 @@
-import { Typography, Card, Button, Space, Statistic, Row, Col } from "antd";
+import { Typography, Card, Space, Statistic, Row, Col } from "antd";
 import Cardbutton from "./Cardbutton";
+import Popup from "./Popup";
 const { Title, Paragraph, Text } = Typography;
 
 export const cardDetails = [
@@ -18,6 +19,7 @@ const MockupCard = () => {
     <>
       <div style={{ marginLeft: "5rem" }}>
         <div className="site-card-border-less-wrapper">
+          <div style={{ marginLeft: "5rem" }}></div>
           <Card bordered={false} style={{ width: 350 }} hoverable>
             {cardDetails.map(detail => {
               return (
@@ -47,14 +49,7 @@ const MockupCard = () => {
                       </div>
                     </Col>
                   </Row>
-
-                  <Button
-                    size="medium"
-                    type="primary"
-                    style={{ marginTop: "1rem" }}
-                  >
-                    Take This Job{" "}
-                  </Button>
+                  <Popup />
                 </>
               );
             })}
