@@ -84,3 +84,15 @@ body {
 .ant-popover-message > .anticon {
   top: "59.005px";
 }
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background: #9fa2b4;
+  opacity: 0.9;
+}
+.ant-layout-header {
+  height: 46px !important;
+}
+.dashboardTitle
+  .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal)
+  .ant-menu-item-selected {
+  background: none;
+}
