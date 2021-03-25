@@ -96,3 +96,13 @@ body {
   .ant-menu-item-selected {
   background: none;
 }
+.body {
+  pointer-events: none;
+  opacity: 0.8;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}

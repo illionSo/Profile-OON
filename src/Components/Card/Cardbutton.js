@@ -1,16 +1,36 @@
+import React, { useState } from "react";
 import { Select } from "antd";
 const { Option } = Select;
 
 const Cardbutton = () => {
+  const [style, setStyle] = useState(true);
+
   function handleChange(value) {
+    if (value === "Yes") {
+      console.log("green");
+    } else {
+      console.log("red");
+    }
+    setStyle(!style);
+
     console.log(`selected ${value}`);
   }
 
   return (
     <>
-      <Select defaultValue="No" style={{ width: 68 }} onChange={handleChange}>
-        <Option value="Yes">Yes</Option>
-        <Option value="No">No</Option>
+      <Select
+        className={style ? "red" : "green"}
+        defaultValue="No"
+        style={{ width: 68 }}
+        onChange={handleChange}
+      >
+        <Option value="Yes" style={{ color: "green" }}>
+          {" "}
+          Yes
+        </Option>
+        <Option value="No" style={{ color: "red" }}>
+          No
+        </Option>
       </Select>
     </>
   );

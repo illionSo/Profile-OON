@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Popconfirm, message, Button, Typography } from "antd";
 
 const { Paragraph } = Typography;
@@ -14,9 +15,13 @@ const content = (
   </div>
 );
 const Popup = () => {
+  const [style, setStyle] = useState(false);
+
   function confirm() {
     message.info("Clicked on Yes.");
   }
+
+  console.log(style);
   return (
     <>
       <Popconfirm
@@ -26,7 +31,14 @@ const Popup = () => {
         okText="Agree"
         cancelText="No"
       >
-        <Button size="medium" type="primary" style={{ marginTop: "1rem" }}>
+        <Button
+          size="medium"
+          type="primary"
+          style={{ marginTop: "1rem" }}
+          onClick={() => {
+            setStyle(!style);
+          }}
+        >
           Take This Job
         </Button>
       </Popconfirm>
