@@ -6,11 +6,6 @@ const Cardbutton = () => {
   const [style, setStyle] = useState(true);
 
   function handleChange(value) {
-    if (value === "Yes") {
-      console.log("green");
-    } else {
-      console.log("red");
-    }
     setStyle(!style);
 
     console.log(`selected ${value}`);
