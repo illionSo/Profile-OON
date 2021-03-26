@@ -58,12 +58,12 @@ body {
   margin-top: 1rem;
 }
 
-.ant-btn-sm {
+/* .ant-btn-sm {
   border: 2px solid #1890ff;
   padding: 3px 22px 4px;
   height: 35px;
   color: #1890ff;
-}
+} */
 .ant-btn-sm span {
   font-weight: 600;
 }
@@ -81,8 +81,25 @@ body {
   right: 25px;
   position: absolute;
 }
+/* Popconfirm Style*/
+.ant-popover-inner-content {
+  position: static;
+
+  left: 0px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  top: 0px;
+}
+.ant-popover-content {
+  width: 478px;
+  height: 172px;
+  position: static;
+}
 .ant-popover-message > .anticon {
-  top: "59.005px";
+  top: 59.005px;
+  position: absolute;
 }
 .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
   background: #9fa2b4;

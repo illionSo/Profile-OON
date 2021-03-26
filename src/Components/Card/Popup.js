@@ -25,7 +25,7 @@ const Popup = () => {
   return (
     <>
       <Popconfirm
-        placement="rightTop"
+        placement="rightBottom"
         title={content}
         onConfirm={confirm}
         okText="Agree"

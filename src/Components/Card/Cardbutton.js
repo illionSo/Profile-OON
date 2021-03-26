@@ -7,7 +7,6 @@ const Cardbutton = () => {
 
   function handleChange(value) {
     setStyle(!style);
-
     console.log(`selected ${value}`);
   }
 
