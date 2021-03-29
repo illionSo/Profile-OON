@@ -9,13 +9,13 @@ import Sidebar from "./Components/Dashboard/Sidebar";
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <Writerdetails />
       <FeaturesLeft />
       <Opinions />
-      <MockupCard />
+      <MockupCard /> */}
 
-      {/* <Sidebar /> */}
+      <Sidebar />
     </>
   );
 }

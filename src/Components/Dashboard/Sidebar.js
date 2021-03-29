@@ -1,90 +1,107 @@
-import React from "react";
-import { Layout, Menu } from "antd";
+import * as React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { useState } from "react";
+import { Menu, Layout } from "antd";
+import Dashboard from "./Dashboard";
+import OpinionList from "./OpinionList";
+import EditorsList from "./EditorsList";
+import WritersList from "./WritersList";
+import MyOpinion from "./MyOpinion";
+import UserManagement from "./UserManagement";
+import Setting from "./Setting";
 
 import {
-  AppstoreOutlined,
-  MenuFoldOutlined,
-  PieChartOutlined,
   DesktopOutlined,
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+  UserOutlined,
+  VideoCameraOutlined,
+  UploadOutlined,
+  PieChartOutlined,
   ContainerOutlined,
-  MailOutlined,
 } from "@ant-design/icons";
-import MenuItem from "antd/lib/menu/MenuItem";
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Sider, Content, Footer } = Layout;
 
 const Sidebar = () => {
+  const [collapsed, setCollapsed] = useState(false);
+  const toggleCollapsed = () => {
+    setCollapsed(!collapsed);
+  };
   return (
-    <Layout>
-      <Sider
-        breakpoint="lg"
-        collapsedWidth="0"
-        onBreakpoint={broken => {
-          console.log(broken);
-        }}
-        onCollapse={(collapsed, type) => {
-          console.log(collapsed, type);
-        }}
-      >
-        <Menu
-          className="dashboardTitle"
-          style={{ height: "100vh", top: "0" }}
-          defaultSelectedKeys={["1"]}
-          defaultOpenKeys={["sub1"]}
-          mode="inline"
-          theme="dark"
+    <Router>
+      <Layout>
+        <Sider
+          trigger={null}
+          collapsible
+          collapsed={collapsed}
+          style={{ height: "100vh" }}
         >
-          <MenuItem
-            key="0"
-            icon={<PieChartOutlined />}
+          <div className={collapsed ? "logo1" : "logo"}>Opinion of Nepal</div>
+
+          <Menu
+            defaultSelectedKeys={["1"]}
+            defaultOpenKeys={["sub1"]}
+            mode="inline"
+            theme="dark"
+            inlineCollapsed={collapsed}
+          >
+            <Menu.Item key="1" icon={<PieChartOutlined />}>
+              <Link to="/">Dashboard</Link>
+            </Menu.Item>
+            <Menu.Item key="2" icon={<DesktopOutlined />}>
+              <Link to="/opinionlist">Opinion List</Link>
+            </Menu.Item>
+            <Menu.Item key="3" icon={<UserOutlined />}>
+              <Link to="/editors">Editors List</Link>
+            </Menu.Item>
+            <Menu.Item key="4" icon={<UserOutlined />}>
+              <Link to="/writers">Writers List</Link>
+            </Menu.Item>
+            <Menu.Item key="5" icon={<VideoCameraOutlined />}>
+              <Link to="/usermanagement">User Management</Link>
+            </Menu.Item>
+            <Menu.Item key="6" icon={<UploadOutlined />}>
+              <Link to="/myopinion">My Opinion</Link>
+            </Menu.Item>
+
+            <Menu.Item key="7" icon={<ContainerOutlined />}>
+              <Link to="/setting"> Setting</Link>
+            </Menu.Item>
+          </Menu>
+        </Sider>
+        <Layout className="site-layout">
+          <Header className="site-layout-background" style={{ padding: 0 }}>
+            {React.createElement(
+              collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
+              {
+                className: "trigger",
+                onClick: toggleCollapsed,
+              }
+            )}
+          </Header>
+          <Content
+            className="site-layout-background"
             style={{
-              paddingLeft: "0",
-              marginBottom: "2rem",
-              fontWeight: "Bold",
-              marginTop: "1.5rem",
-              backgroundColor: "none",
+              margin: "24px 16px",
+              padding: 24,
+              minHeight: 280,
             }}
           >
-            Opinion of Nepal
-          </MenuItem>
-          <Menu.Item key="1" icon={<PieChartOutlined />}>
-            Dashboard
-          </Menu.Item>
-          <Menu.Item key="2" icon={<DesktopOutlined />}>
-            Opinion List
-          </Menu.Item>
-          <Menu.Item key="3" icon={<ContainerOutlined />}>
-            Editors List
-          </Menu.Item>
-          <Menu.Item key="4" icon={<AppstoreOutlined />}>
-            Opinion Pending
-          </Menu.Item>
-          <Menu.Item key="5" icon={<MailOutlined />}>
-            User Management
-          </Menu.Item>
-          <Menu.Item key="6" icon={<ContainerOutlined />}>
-            My Opinions
-          </Menu.Item>
-          <Menu.Item key="7" icon={<MenuFoldOutlined />}>
-            Settings
-          </Menu.Item>
-        </Menu>
-      </Sider>
-      <Layout>
-        <Header style={{ padding: 0, background: "none" }}>
-          <div style={{ float: "right" }}>
-            <h3> Sameer Pokharel </h3>
-          </div>
-        </Header>
-        <Content style={{ margin: "24px 16px 0" }}>
-          <div style={{ padding: 24, background: "#fff", minHeight: "520px" }}>
-            content
-          </div>
-        </Content>
-        <Footer style={{ textAlign: "center" }}>
-          Copyright 2021 Opinion of Nepal | Powered by @illionSo
-        </Footer>
+            <Route exact path="/" component={Dashboard} />
+            <Route path="/opinionlist" component={OpinionList} />
+            <Route exact path="/editors" component={EditorsList} />
+            <Route path="/writers" component={WritersList} />
+            <Route exact path="/myopinion" component={MyOpinion} />
+            <Route path="/usermanagement" component={UserManagement} />
+            <Route path="/setting" component={Setting} />
+          </Content>
+          <Footer style={{ textAlign: "center" }}>
+            {" "}
+            Copyright 2021 Opinion of Nepal | Powered by @illionSo
+          </Footer>
+        </Layout>
       </Layout>
-    </Layout>
+    </Router>
   );
 };
 
