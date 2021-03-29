@@ -1,11 +1,11 @@
-import { Input } from 'antd';
+import { Input } from "antd";
 
 const FeaturesRight = () => {
-    return (
-        <>
-           <Input placeholder='Search' /> 
-        </>
-    )
-}
+  return (
+    <>
+      <Input placeholder="Search" />
+    </>
+  );
+};
 
-export default FeaturesRight
+export default FeaturesRight;
