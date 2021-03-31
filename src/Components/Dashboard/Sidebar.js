@@ -1,7 +1,7 @@
 import * as React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { useState } from "react";
-import { Menu, Layout, Avatar, Image, Space, Typography } from "antd";
+import { Menu, Layout, Avatar, Image, Space, Typography, Divider } from "antd";
 import Dashboard from "./Dashboard";
 import OpinionList from "./OpinionList";
 import EditorsList from "./EditorsList";
@@ -108,7 +108,7 @@ const Sidebar = () => {
                       color: " #C5C7CD",
                       boxSizing: "border-box",
                       fontSize: "18px",
-                      marginRight: "8px",
+                      marginRight: "1.5rem",
                     }}
                   />
                   <BellOutlined
@@ -120,6 +120,12 @@ const Sidebar = () => {
                     }}
                   />
                 </div>{" "}
+                <div>
+                  <Divider
+                    type="vertical"
+                    style={{ marginLeft: "-9rem", height: "27px" }}
+                  />
+                </div>
                 <Title
                   level={5}
                   style={{
