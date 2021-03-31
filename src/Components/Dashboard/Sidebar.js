@@ -73,7 +73,10 @@ const Sidebar = () => {
           </Menu>
         </Sider>
         <Layout className="site-layout">
-          <Header className="site-layout-background" style={{ padding: 0 }}>
+          <Header
+            className="site-layout-background"
+            style={{ padding: 0, background: "#E5E5E5" }}
+          >
             {React.createElement(
               collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
               {
@@ -159,6 +162,7 @@ const Sidebar = () => {
               margin: "24px 16px",
               padding: 24,
               minHeight: 280,
+              background: "#fff",
             }}
           >
             <Route exact path="/" component={Dashboard} />
@@ -169,7 +173,7 @@ const Sidebar = () => {
             <Route path="/usermanagement" component={UserManagement} />
             <Route path="/setting" component={Setting} />
           </Content>
-          <Footer style={{ textAlign: "center" }}>
+          <Footer style={{ textAlign: "center", backgrounbd: "#E5E5E5" }}>
             {" "}
             Copyright 2021 Opinion of Nepal | Powered by @illionSo
           </Footer>

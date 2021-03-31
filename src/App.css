@@ -4,6 +4,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  background: #e5e5e5;
 }
 .ant-btn-lg {
   border-color: #00a34b;
@@ -136,6 +137,9 @@ body {
 .logo1 {
   display: none;
 }
-.site-layout .site-layout-background {
-  background: #fff;
+.ant-layout {
+  background: #e5e5e5 !important;
+}
+.ant-layout-footer {
+  background: #e5e5e5;
 }
