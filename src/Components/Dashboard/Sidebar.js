@@ -1,7 +1,7 @@
 import * as React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { useState } from "react";
-import { Menu, Layout } from "antd";
+import { Menu, Layout, Avatar, Image, Space, Typography } from "antd";
 import Dashboard from "./Dashboard";
 import OpinionList from "./OpinionList";
 import EditorsList from "./EditorsList";
@@ -19,8 +19,11 @@ import {
   UploadOutlined,
   PieChartOutlined,
   ContainerOutlined,
+  BellOutlined,
+  SearchOutlined,
 } from "@ant-design/icons";
 const { Header, Sider, Content, Footer } = Layout;
+const { Title } = Typography;
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -78,6 +81,71 @@ const Sidebar = () => {
                 onClick: toggleCollapsed,
               }
             )}
+
+            <Title
+              level={5}
+              style={{
+                position: "absolute",
+                top: "18px",
+                left: "290px",
+                fontWeight: "bold",
+                fontSize: "24px",
+                lineHeight: "30px",
+                letterSpacing: " 0.3px",
+
+                color: " #252733",
+              }}
+            >
+              Dynamic Title(changes on click)
+            </Title>
+
+            <div style={{ float: "right" }}>
+              <Space>
+                <div style={{ marginRight: "10rem" }}>
+                  <SearchOutlined
+                    size={30}
+                    style={{
+                      color: " #C5C7CD",
+                      boxSizing: "border-box",
+                      fontSize: "18px",
+                      marginRight: "8px",
+                    }}
+                  />
+                  <BellOutlined
+                    size={30}
+                    style={{
+                      color: " #C5C7CD",
+                      boxSizing: "border-box",
+                      fontSize: "18px",
+                    }}
+                  />
+                </div>{" "}
+                <Title
+                  level={5}
+                  style={{
+                    marginLeft: "1rem",
+                    position: "absolute",
+                    right: "71px",
+                    top: "21px",
+                    color: "##25273",
+                    letterSpacing: "0.2px",
+                    fontStyle: "normal",
+                    fontWeight: 600,
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                  }}
+                >
+                  Suman Bhattarai
+                </Title>
+                <Avatar
+                  size={40}
+                  style={{ marginRight: "1em" }}
+                  src={
+                    <Image src="https://images.unsplash.com/photo-1567168409016-c73ab82ef45b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=342&q=80" />
+                  }
+                />
+              </Space>
+            </div>
           </Header>
           <Content
             className="site-layout-background"
