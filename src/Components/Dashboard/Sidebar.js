@@ -110,17 +110,17 @@ const Sidebar = () => {
 
             <div style={{ float: "right" }}>
               <Space>
-                <div style={{ marginRight: "10rem" }}>
+                <div style={{ marginRight: "12rem" }}>
                   <SearchOutlined size={30} style={customStyle.iconStyle1} />
                   <BellOutlined size={30} style={customStyle.iconStyle} />
                 </div>{" "}
                 <div>
                   <Divider
                     type="vertical"
-                    style={{ marginLeft: "-9rem", height: "27px" }}
+                    style={{ marginLeft: "-10rem", height: "27px" }}
                   />
                 </div>
-                <Title level={5} style={customStyle.dynamicTitle}>
+                <Title level={5} style={customStyle.userStyle}>
                   Suman Bhattarai
                 </Title>
                 <Avatar
@@ -169,6 +169,11 @@ const customStyle = {
     boxSizing: "border-box",
     fontSize: "18px",
     marginRight: "1.5rem",
+  },
+  userStyle: {
+    position: "absolute",
+    top: "22px",
+    right: "69px",
   },
 };
 export default Sidebar;
