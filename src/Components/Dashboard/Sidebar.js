@@ -1,6 +1,6 @@
 import * as React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, Layout, Avatar, Space, Typography, Divider } from "antd";
 import Dashboard from "./Dashboard";
 import OpinionList from "./OpinionList";
@@ -27,12 +27,23 @@ const { Header, Sider, Content, Footer } = Layout;
 const { Title } = Typography;
 
 const Sidebar = () => {
-  const [value, setValue] = useState("Dashboard");
+  const [value, setValue] = useState("  ");
   const handleClick = e => {
     const val = e.target.innerHTML;
     console.log(val);
     setValue(val);
   };
+
+  useEffect(() => {
+    console.log(value);
+    const val = window.localStorage.getItem("value");
+    setValue(JSON.parse(val));
+  }, []);
+  useEffect(() => {
+    console.log(value);
+    window.localStorage.setItem("value", JSON.stringify(value));
+  });
+
   const [collapsed, setCollapsed] = useState(false);
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
