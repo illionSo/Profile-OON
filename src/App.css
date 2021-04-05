@@ -143,3 +143,6 @@ body {
 .ant-layout-footer {
   background: #e5e5e5;
 }
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: #4b4f52;
+}

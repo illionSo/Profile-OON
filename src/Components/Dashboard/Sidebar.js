@@ -28,9 +28,12 @@ const { Title } = Typography;
 
 const Sidebar = () => {
   const [value, setValue] = useState("  ");
+
   const handleClick = e => {
     const val = e.target.innerHTML;
-    console.log(val);
+    // const cls = e.target.currentTarget;
+
+    // console.log(val);
     setValue(val);
   };
 
