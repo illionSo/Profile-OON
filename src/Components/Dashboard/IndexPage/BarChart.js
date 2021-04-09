@@ -1,23 +1,29 @@
 import React, { useState, useEffect } from "react";
-import { Bar } from "react-chartjs-2";
+import { Pie, Chart } from "react-chartjs-2";
 
 const style = {
   width: "600px",
   margin: "20px auto",
   height: "400px",
 };
+Chart.defaults.global.legend.display = false;
 const BarChart = () => {
   const [chartData, setChartData] = useState({});
+
   const chart = () => {
     setChartData({
-      labels: ["Fortnite", "Valorant", "PUBG", "Overwatch", "FIFA 20", "PUBG"],
+      labels: [
+        "Tourism",
+        "Informatiion Technology",
+        "Politics ",
+        "Experience ",
+        "Agriculture",
+      ],
       datasets: [
         {
-          maxBarThickness: 40,
-          minBarLength: 20,
-          data: [70, 80, 75, 60, 20, 5],
-          backgroundColor: "#2e86de",
-          label: ["Votes"],
+          data: [80, 45, 32, 56, 5],
+          backgroundColor: "#1895DE",
+          hoverOffset: 4,
         },
       ],
     });
@@ -28,26 +34,23 @@ const BarChart = () => {
 
   return (
     <div style={style}>
-      <Bar
+      <Pie
         options={{
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  suggestedMin: 0,
-                  suggestedMax: 100,
-                },
-              },
-            ],
-          },
           responsive: true,
           maintainAspectRatio: false,
           animation: {
             animateScale: true,
           },
           title: {
-            display: true,
+            display: false,
             text: "Your favorite games",
+          },
+          plugins: {
+            labels: {
+              display: true,
+              color: "white",
+              position: "outside",
+            },
           },
         }}
         data={chartData}

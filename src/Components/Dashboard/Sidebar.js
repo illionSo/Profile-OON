@@ -2,7 +2,7 @@ import * as React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, Layout, Avatar, Space, Typography, Divider } from "antd";
-import Dashboard from "./Dashboard";
+import Dashboard from "./IndexPage/Dashboard";
 import OpinionList from "./OpinionList";
 import EditorsList from "./EditorsList";
 import WritersList from "./WritersList";
