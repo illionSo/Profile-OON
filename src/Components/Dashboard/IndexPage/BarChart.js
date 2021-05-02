@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Pie, Chart } from "react-chartjs-2";
+import { Bar, Chart } from "react-chartjs-2";
 
 const style = {
-  width: "600px",
+  width: "300px",
   margin: "20px auto",
-  height: "400px",
+  height: "200px",
 };
 Chart.defaults.global.legend.display = false;
 const BarChart = () => {
@@ -12,19 +12,17 @@ const BarChart = () => {
 
   const chart = () => {
     setChartData({
-      labels: [
-        "Tourism",
-        "Informatiion Technology",
-        "Politics ",
-        "Experience ",
-        "Agriculture",
-      ],
+      labels: ["Politics ", "Experience "],
       datasets: [
         {
-          data: [80, 45, 32, 56, 5],
-          backgroundColor: "#1895DE",
-          hoverOffset: 4,
-        },
+          data: [80, 72],
+          backgroundColor: ["#1895DE", "#B222FA"],
+              hoverOffset: 4,
+              barPercentage: 0.5,
+                barThickness: 6,
+                maxBarThickness: 8,
+                minBarLength: 2,
+               },
       ],
     });
   };
@@ -34,23 +32,12 @@ const BarChart = () => {
 
   return (
     <div style={style}>
-      <Pie
+      <Bar
         options={{
           responsive: true,
           maintainAspectRatio: false,
           animation: {
             animateScale: true,
-          },
-          title: {
-            display: false,
-            text: "Your favorite games",
-          },
-          plugins: {
-            labels: {
-              display: true,
-              color: "white",
-              position: "outside",
-            },
           },
         }}
         data={chartData}
